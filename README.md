@@ -29,8 +29,8 @@ git clone https://github.com/AugustoLL/qr-code-generator-frontend.git
 ```sh
 git clone https://github.com/AugustoLL/qr-code-generator-backend.git
 ```
-5. Create the .env file for the backend (more info in the [backend repository](https://github.com/AugustoLL/Qr-Code-Generator-Backend))
-6. Run Docker Compose.
+5. Create the .env file for the backend in the backend directory (more info in the [backend repository](https://github.com/AugustoLL/Qr-Code-Generator-Backend))
+6. Run Docker Compose in main directory.
 ```sh
 docker-compose up -d
 ```
