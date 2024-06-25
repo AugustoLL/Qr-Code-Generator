@@ -25,7 +25,10 @@ git clone https://github.com/AugustoLL/qr-code-generator-frontend.git
 ```sh
 git clone https://github.com/AugustoLL/qr-code-generator-backend.git
 ```
-4. Run `docker-compose up -d` in the root directory of this repository.
+4. Run Docker Compose.
+```sh
+docker-compose up -d
+```
 
 ## Services
 
