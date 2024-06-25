@@ -21,7 +21,7 @@ This repository contains a Docker Compose file for running a sample QR code gene
 This sample includes two services:
 
 - `qr-code-generator-backend`: This service runs the Node.js backend application for generating QR codes.
-- `qr-code-generator-frontend`: This service runs the React frontend application for the QR code generator.
+- `qr-code-generator-frontend`: This service runs the Vue frontend application for the QR code generator.
 
 ## Accessing the Application
 
