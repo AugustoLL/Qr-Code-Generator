@@ -16,17 +16,21 @@ This repository contains a Docker Compose file for running a sample QR code gene
 1. Clone this repository and move to the new directory
 ```sh
 git clone https://github.com/AugustoLL/Qr-Code-Generator.git
+```
+2. Move to the new directory
+```sh
 cd Qr-Code-Generator
 ```
-2. Clone the frontend repository
+3. Clone the frontend repository
 ```sh
 git clone https://github.com/AugustoLL/qr-code-generator-frontend.git
 ```
-3. Clone the backend repository
+4. Clone the backend repository
 ```sh
 git clone https://github.com/AugustoLL/qr-code-generator-backend.git
 ```
-4. Run Docker Compose.
+5. Create the .env file for the backend (more info in the [backend repository](https://github.com/AugustoLL/Qr-Code-Generator-Backend))
+6. Run Docker Compose.
 ```sh
 docker-compose up -d
 ```
