@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Docker Compose](https://img.shields.io/badge/docker-compose?style=for-the-badge&logo=docker&logoColor=%23f45283&color=%230898e8)]
+![Docker Compose](https://img.shields.io/badge/docker-compose?style=for-the-badge&logo=docker&logoColor=%23f45283&color=%230898e8)
 
 
 # Docker Compose Sample for QR Code Generator
