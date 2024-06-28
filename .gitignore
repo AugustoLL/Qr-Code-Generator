@@ -1,2 +1,4 @@
 /qr-code-generator-backend
 /qr-code-generator-frontend
+/nginx
+nginx.conf
