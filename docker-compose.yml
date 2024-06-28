@@ -3,7 +3,7 @@ services:
     container_name: backend
     build: ./qr-code-generator-backend
     volumes:
-      - server_data:/var/server
+      - ./qr-code-generator-backend/logs:/var/server/logs
     ports:
       - "8080:8080"
     environment:
