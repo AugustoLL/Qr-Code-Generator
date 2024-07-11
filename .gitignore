@@ -2,3 +2,4 @@
 /qr-code-generator-frontend
 /nginx
 nginx.conf
+.env
