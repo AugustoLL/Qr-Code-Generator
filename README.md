@@ -21,16 +21,15 @@ git clone https://github.com/AugustoLL/Qr-Code-Generator.git
 ```sh
 cd Qr-Code-Generator
 ```
-3. Clone the frontend repository
+3. Create a .env file
 ```sh
-git clone https://github.com/AugustoLL/qr-code-generator-frontend.git
+FRONTEND_PORT=3000
+BACKEND_PORT=8080
+CACHE_EXPIRATION_TIME=3600
+MAX_CACHE_SIZE=100
+API_URL=http://localhost:8080/api/generate?
 ```
-4. Clone the backend repository
-```sh
-git clone https://github.com/AugustoLL/qr-code-generator-backend.git
-```
-5. Create the .env file for the backend in the backend directory (more info in the [backend repository](https://github.com/AugustoLL/Qr-Code-Generator-Backend))
-6. Run Docker Compose in main directory.
+4. Run Docker Compose.
 ```sh
 docker-compose up -d
 ```
@@ -46,10 +45,8 @@ This sample includes two services:
 
 By default, the `qr-code-generator-frontend` service is configured to run on port 3000. You can access the application by navigating to `http://localhost:3000` in your web browser.
 
-Please note that this repository does not include the source code for the `qr-code-generator-backend` and `qr-code-generator-frontend` services. You will need to clone those repositories separately and configure them according to your needs.
 
-
-Here are the links to the repositories:
+Here are the links to the repositories for each service:
 
 - [Frontend Repository](https://github.com/AugustoLL/Qr-Code-Generator-Frontend)
 - [Backend Repository](https://github.com/AugustoLL/Qr-Code-Generator-Backend)
