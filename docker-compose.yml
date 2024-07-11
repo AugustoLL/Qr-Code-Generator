@@ -2,40 +2,26 @@ services:
   backend:
     container_name: backend
     build: ./qr-code-generator-backend
+    image: alflyingwhale/qr-code-generator-backend:1.0
     volumes:
       - ./qr-code-generator-backend/logs:/var/server/logs
     ports:
-      - "8080:8080"
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
     environment:
-      - PORT=8080
-      - CACHE_EXPIRATION_TIME=3600
-      - MAX_CACHE_SIZE=100
+      - BACKEND_PORT=${BACKEND_PORT}
+      - CACHE_EXPIRATION_TIME=${CACHE_EXPIRATION_TIME}
+      - MAX_CACHE_SIZE=${MAX_CACHE_SIZE}
     env_file:
-      - ./qr-code-generator-backend/.env
-    # networks:
-    #   - backend
+      - .env
 
   frontend:
     container_name: frontend
     build: ./qr-code-generator-frontend
+    image: alflyingwhale/qr-code-generator-frontend:1.1
     ports:
-      - "3000:3000"
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     environment:
-      - PORT=3000
+      - VITE_APP_PORT=${FRONTEND_PORT}
+      - VITE_API_URL=${API_URL}
     env_file:
-      - ./qr-code-generator-frontend/.env
-    # networks:
-    #   - backend
-
-  # nginx:
-  #   image: nginx:1.27.0-alpine
-  #   ports:
-  #     - "8080:80" # Expose Nginx on port 8080 for the backend
-  #   volumes:
-  #     - ./nginx.conf:/etc/nginx/nginx.conf # Mount Nginx configuration file
-  #   networks:
-  #     - backend
-
-# networks:
-#   backend:
-#     driver: bridge
+      - .env
