@@ -15,7 +15,7 @@ services:
 
   frontend:
     container_name: frontend
-    image: alflyingwhale/qr-code-generator-frontend:1.2
+    image: alflyingwhale/qr-code-generator-frontend:1.0
     ports:
       - "${VITE_APP_PORT}:${VITE_APP_PORT}"
     environment:
