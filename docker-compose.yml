@@ -1,14 +1,13 @@
 services:
   backend:
     container_name: backend
-    build: ./qr-code-generator-backend
     image: alflyingwhale/qr-code-generator-backend:1.0
     volumes:
       - ./qr-code-generator-backend/logs:/var/server/logs
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     environment:
-      - BACKEND_PORT=${BACKEND_PORT}
+      - PORT=${BACKEND_PORT}
       - CACHE_EXPIRATION_TIME=${CACHE_EXPIRATION_TIME}
       - MAX_CACHE_SIZE=${MAX_CACHE_SIZE}
     env_file:
@@ -16,12 +15,11 @@ services:
 
   frontend:
     container_name: frontend
-    build: ./qr-code-generator-frontend
-    image: alflyingwhale/qr-code-generator-frontend:1.1
+    image: alflyingwhale/qr-code-generator-frontend:1.2
     ports:
-      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+      - "${VITE_APP_PORT}:${VITE_APP_PORT}"
     environment:
-      - VITE_APP_PORT=${FRONTEND_PORT}
-      - VITE_API_URL=${API_URL}
+      - VITE_APP_PORT=${VITE_APP_PORT}
+      - VITE_API_URL=${VITE_API_URL}
     env_file:
       - .env
